@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgray;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    border: 1px solid black;
+    padding: 70px 60px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+label, input {
+    display: block;
+}
+
+.name {
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 0.75rem;
+    border-radius: 3px;
+    outline: none;
+    width: 100%;
+    border: 1px solid #ccc;
+
+}
+
+form {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    background-color: white;
+}
+
+.btn {
+    font-size: 13px;
+    padding: 10px 60px;
+    border-radius: 3px;
+    color: white;
+    background-color: #261270;
+    border: none;
+    max-width: 150px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0 5px 15px;
+    cursor: pointer;
+}
+
+.btn-right {
+    margin-left: auto;
+}
+
+label {
+    margin: .5rem 0;
+}
+
+.form-control {
+    margin: 10px 5px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-step.form-step-active {
+    display: block;
+}
+
+.form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 1s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/*Progress Bar*/
+.progressBar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+    z-index: 1;
+
+}
+
+.progressBar::before, .progress {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+
+}
+
+.progress {
+    background-color: #261270;
+    width: 0;
+    transition: 0.3s;
+
+}
+
+.progress-step {
+    width: 2rem;
+    height: 2rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 1rem;
+    color: #666;
+
+
+}
+
+.progress-step-active {
+    background-color: #261270;
+    color: #f3f3f3;
+}
+
+.fa-circle-check{
+    font-size: 40px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 30px;
+
+}
+
+
+
+

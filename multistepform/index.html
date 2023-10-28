@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<form class="form" id="form">
+    <h3>Register</h3>
+    <div class="progressBar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active" data-title="Intro"></div>
+        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="Account"></div>
+        <div class="progress-step" data-title="Password"></div>
+    </div>
+    <div class="form-step form-step-active">
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" class="name" id="name">
+            <div class="form-control">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname">
+            </div>
+            <div class="btns">
+                <button class="btn btn-next btn-right">Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="form-step">
+        <div class="form-control">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone">
+        </div>
+        <div class="form-control">
+            <label for="email">E-Mail</label>
+            <input type="text" id="email">
+        </div>
+        <div class="btns">
+            <button class="btn prev">Previous</button>
+            <button class="btn btn-next">Next</button>
+        </div>
+    </div>
+    <div class="form-step">
+        <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-control">
+            <label for="dob">Date Of Birth</label>
+            <input type="text" id="dob">
+        </div>
+        <div class="btns">
+            <button class="btn prev">Previous</button>
+            <button class="btn btn-next">Next</button>
+        </div>
+    </div>
+    <div class="form-step">
+        <div class="form-control">
+            <label for="phone">Password</label>
+            <input type="password" id="password">
+        </div>
+        <div class="btns">
+            <button class="btn prev">Previous</button>
+            <button class="btn" id="btn-submit">Submit</button>
+        </div>
+    </div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
