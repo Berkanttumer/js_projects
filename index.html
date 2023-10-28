@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<div class="container">
+
+    <form class="form" id="form">
+        <h2>Signup Form</h2>
+<!--        Progress Bar-->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="Intro"></div>
+            <div class="progress-step" data-title="Contact"></div>
+            <div class="progress-step" data-title="User"></div>
+            <div class="progress-step" data-title="Password"></div>
+        </div>
+
+<!--       Steps-->
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="input-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname">
+            </div>
+            <div class="">
+                <button class="btn btn-right btn-next">Next</button>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone">
+            </div>
+            <div class="input-group">
+                <label for="email">E-Mail</label>
+                <input type="text" id="email">
+            </div>
+            <div class="buttons">
+                <button class="btn btn-prev">Previous</button>
+                <button class="btn btn-next">Next</button>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="input-group">
+                <label for="date">Date Of Birth</label>
+                <input type="date" id="date">
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="buttons">
+                <button class="btn btn-prev">Previous</button>
+                <button class="btn btn-next">Next</button>
+            </div>
+        </div>
+        <div class="form-step ">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <div class="buttons">
+                <button class="btn btn-prev">Previous</button>
+                <button class="btn" id="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
