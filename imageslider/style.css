@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 700px;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 1.15) 0 5px 15px;
+}
+
+.images {
+    display: flex;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.left {
+    position: absolute;
+    left: 10px;
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+}
