@@ -572,6 +572,10 @@ video {
   margin: 2.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .flex {
   display: flex;
 }
@@ -592,6 +596,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .content-center {
   align-content: center;
 }
@@ -604,8 +612,16 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-8 {
@@ -645,8 +661,21 @@ video {
   padding-left: 1.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-black {
@@ -670,9 +699,57 @@ video {
   }
 }
 
+@media (max-width: 1024px) {
+  .input {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 100px;
+  }
+}
+
 .btn {
   border: 2px solid darkgray;
   font-size: 20px;
   padding: 5px 15px;
   cursor: pointer;
+}
+
+.popular {
+  margin-top: 50px;
+}
+
+.popular h1 {
+}
+
+.card {
+  background-color: #324147;
+  padding: 5px;
+  width: calc(20% - 10px);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+  background: #324147;
+}
+
+.card h2 {
+  margin-top: 5px;
+  padding: 10px 10px;
+}
+
+.card p {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.card a img {
+  width: 100%;
+}
+
+body {
 }
