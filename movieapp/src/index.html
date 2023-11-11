@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <title>BerkantFlix</title>
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body class="bg-black text-white flex items-center content-center flex-col">
-<div class="container m-10 ">
-    <div class="navbar flex content-between justify-between">
-        <div class="logo w-[180px]"><img src="/src/e9e7a5a5bda4050781491119636d0b0f.png" alt=""></div>
-        <div class="input w-[780px]">
+
+<header class="header">
+    <div class="flex items-center justify-between">
+        <a href="#" class="logo w-[180px] mr-6">
+            <img src="/src/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
+        </a>
+        <div class="input w-[780px] mr-6">
             <input class="text-l w-full outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
                    placeholder="Search a movie or show">
         </div>
@@ -17,13 +23,17 @@
             <a href="#" class="upload">Upload</a>
             <a href="#" class="sign">Sign in</a>
             <a class="btn font-bold rounded-md border-4 border-solid">Register</a>
+            <a href="#" class="bars hidden mr-4"><i class="fa-solid fa-bars"></i></a>
         </div>
     </div>
+</header>
+
+<div class="container">
     <div class="swiper">
     </div>
-    <div class="popular">
+    <div class="popular max-w-[1200px]">
         <h1 class="text-center uppercase text-2xl font-bold mb-12">Popular Movies</h1>
-        <div class="cards flex gap-5 items-center justify-center flex-wrap">
+        <div class="cards gap-5">
             <div class="card">
                 <a href="#" class="img">
                     <img src="/src/no-image.jpg" alt="">
@@ -80,11 +90,101 @@
                 <h2>Movie Title</h2>
                 <p>Release: XX/XX/XXXX</p>
             </div>
-
         </div>
-
     </div>
 </div>
+    <footer class="footer mt-20">
+        <div class="widgets-row">
+            <div class="widgets-container">
+                <div class="footer-widgets">
+                    <div class="footer-logo">
+                        <a href="#" class="logo text-2xl">BerkantFlix</a>
+                    </div>
+                    <div class="widget-nav-menu">
+                        <h4>Movie Categories</h4>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Adventure</a>
+                            </li>
+                            <li>
+                                <a href="#">Animation</a>
+                            </li>
+                            <li>
+                                <a href="#">Comedy</a>
+                            </li>
+                            <li>
+                                <a href="#">Crime</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-nav-menu">
+                        <ul class="menu-list pt-[22.5px]">
+                            <li>
+                                <a href="#">Drama</a>
+                            </li>
+                            <li>
+                                <a href="#">Documentary</a>
+                            </li>
+                            <li>
+                                <a href="#">Horror</a>
+                            </li>
+                            <li>
+                                <a href="#">Mystrey</a>
+                            </li>
+                            <li>
+                                <a href="#">Romance</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-nav-menu">
+                        <h4>TV Series</h4>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Valentine Day</a>
+                            </li>
+                            <li>
+                                <a href="#">Underrated Comedies</a>
+                            </li>
+                            <li>
+                                <a href="#">Scary TV Series</a>
+                            </li>
+                            <li>
+                                <a href="#">Classic Shows</a>
+                            </li>
+                            <li>
+                                <a href="#">Reality TV Shows</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget-nav-menu">
+                        <ul class="menu-list pt-[22.5px]">
+                            <li>
+                                <a href="#">Original Shows</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem Shows</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem Shows</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem Shows</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem Shows</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright-row"></div>
+    </footer>
+
 
 
 </body>

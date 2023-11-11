@@ -2,23 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 1300px) {
+@media (max-width: 1280px) {
     .right {
-        display: none;
+        margin-left: 20px;
     }
 
-}
-
-@media (max-width: 1024px) {
     .input {
-        width: 400px;
+        display: none;
     }
 }
 
 @media (max-width: 1200px) {
-    .card {
-        width: 100px;
+    .input {
+        display: none;
     }
+}
+
+@media (max-width: 900px) {
+    .right .upload {
+        display: none;
+    }
+
+    .right .sign {
+        display: none;
+    }
+
+    .right .btn {
+        display: none;
+    }
+
+    .right .bars {
+        display: block;
+    }
+}
+
+header {
+    margin-top: 20px;
+
+}
+
+.fa-bars {
+    font-size: 20px;
 }
 
 
@@ -30,18 +54,28 @@
 }
 
 .popular {
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
 }
 
 .popular h1 {
 
 }
 
-.card {
+.right a {
+    white-space: nowrap;
+}
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.card {
     background-color: #324147;
     padding: 5px;
-    width: calc(20% - 10px);
+
 }
 
 .card:hover {
@@ -64,5 +98,49 @@
     width: 100%;
 }
 
-body {
+/*Footer*/
+
+.footer {
+    width: 1280px;
 }
+
+.widgets-row {
+    padding: 60px 0;
+    border-bottom: 1px solid #dee0ea;
+}
+
+.widgets-row .footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-widgets > div {
+    flex: 1;
+}
+
+.footer-widgets .footer-logo {
+    flex: 3;
+}
+
+.footer-widgets .widget-nav-menu h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.footer-widgets .widget-nav-menu ul {
+    margin-top: 20px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .widgets-row .footer-widgets > div {
+        flex: unset;
+    }
+}
+
+
