@@ -572,6 +572,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -694,6 +698,10 @@ video {
   text-align: center;
 }
 
+.font-Poppins {
+  font-family: Poppins, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -701,6 +709,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -756,7 +768,7 @@ video {
   }
 }
 
-header {
+.header {
   margin-top: 20px;
 }
 
@@ -823,4 +835,17 @@ header {
 
 .icons {
   font-size: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*Movie Details Page*/
+
+.nav-menu ul li a:hover {
+  color: #DC1A28;
 }
