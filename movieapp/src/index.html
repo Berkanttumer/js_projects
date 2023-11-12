@@ -11,22 +11,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black text-white flex items-center content-center flex-col font-Poppins">
-
+<body class="bg-black text-white font-Poppins">
 <header class="header">
-    <div class="flex items-center justify-between">
-        <a href="#" class="logo mr-6">
-            <img class="w-[180px]" src="/src/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
-        </a>
-        <div class="input w-[780px] mr-6">
-            <input class="text-l w-full outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
+    <div class="container flex items-center justify-between">
+        <div class="logo">
+            <a href="index.html" class="logo">
+                <img class="w-[180px]" src="/src/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
+            </a>
+        </div>
+        <div class="input">
+            <input class="text-l  w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
                    placeholder="Search a movie or show">
         </div>
-        <div class="right flex items-center content-center gap-8 ">
-            <a href="#" class="upload">Upload</a>
-            <a href="#" class="sign">Sign in</a>
-            <a class="btn rounded-md border-4 border-solid">Register</a>
-            <a href="#" class="bars hidden mr-4"><i class="fa-solid fa-bars"></i></a>
+        <div class="nav-menu ">
+            <ul class="flex">
+                <li class="ml-5">
+                    <a href="/">Sign In</a>
+                </li>
+                <li class="ml-5">
+                    <a href="/">Register</a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
@@ -96,24 +101,26 @@
         </div>
     </div>
 </div>
-<footer class="footer mt-12 flex justify-between w-[1300px] border-t-2 border-gray-500 pt-10 pb-8 items-center">
-    <div class="copyright">© Copyright 2023</div>
-    <div class="icons">
-        <ul class="icons flex gap-3">
-            <a href="#">
-                <li><i class="fa-brands fa-facebook"></i></li>
-            </a>
-            <a href="#">
-                <li><i class="fa-brands fa-instagram"></i></li>
-            </a>
-            <a href="#">
-                <li><i class="fa-brands fa-twitter"></i></li>
-            </a>
-        </ul>
+<footer class="footer flex justify-between border-t border-gray-500 items-center mt-5">
+    <div class="container flex justify-between mt-5">
+        <div class="copyright">© Copyright 2023</div>
+        <div class="icons">
+            <ul class="icons flex gap-3">
+                <a href="#">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </a>
+                <a href="#">
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </a>
+            </ul>
+        </div>
+
     </div>
 
 </footer>
-
 
 </body>
 </html>

@@ -121,6 +121,27 @@
 
 /*Movie Details Page*/
 
+.fa-solid {
+    font-size: 35px;
+
+    bottom: 0;
+    color: #E0BA49;
+
+}
+
+.play-button {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
 .nav-menu ul li a:hover {
     color: #DC1A28;
 }
@@ -155,12 +176,17 @@
     margin-top: 15px;
 }
 
+.trailer img:hover {
+    transform: scale(1.15);
+}
+
 .about ul li {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
 
-footer .container {
+footer .container{
     margin: 20px auto !important;
 }
+
