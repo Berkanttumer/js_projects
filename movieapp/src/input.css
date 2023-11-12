@@ -123,5 +123,44 @@
 
 .nav-menu ul li a:hover {
     color: #DC1A28;
+}
 
+
+.total-points h4 {
+    border: 1px solid #E0BA49;
+    font-size: 35px;
+    border-radius: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.other-points h4 {
+    font-size: 25px;
+}
+
+.other-points p {
+    font-size: 14px;
+    color: darkgray;
+}
+
+.top-rank > div {
+    font-size: 20px;
+}
+
+.cast-row img:hover {
+    transform: scale(1.15);
+}
+
+.cast-row p {
+    margin-top: 15px;
+}
+
+.about ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+footer .container {
+    margin: 20px auto !important;
 }
