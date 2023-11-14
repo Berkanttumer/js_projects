@@ -19,7 +19,7 @@
         position: fixed;
         top: 20px;
         left: 20px;
-       font-size: 30px;
+        font-size: 30px;
         z-index: 1;
     }
 
@@ -45,10 +45,15 @@
 
 
 .btn {
-    border: 2px solid darkgray;
-    font-size: 20px;
-    padding: 5px 15px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 25px;
     cursor: pointer;
+}
+
+.btn:hover {
+    color: #DC1A28;
 }
 
 .popular {
@@ -96,9 +101,12 @@
 
 /*Footer*/
 
-
 .icons {
     font-size: 20px;
+}
+
+.fa-brands:hover{
+    color: #DC1A28;
 }
 
 .container {
@@ -107,6 +115,9 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/*TV Shows*/
+
 
 /*Movie Details Page*/
 
@@ -179,3 +190,6 @@ footer .container {
     margin: 20px auto !important;
 }
 
+.details-page {
+
+}

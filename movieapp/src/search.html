@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BerkantFlix</title>
+    <title>BerkantFlix | Search</title>
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -13,6 +13,12 @@
 </head>
 <body class="bg-black text-white font-Poppins">
 <header class="header">
+    <div class="mobile-bar hidden">
+        <a href="#">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+    </div>
     <div class="container flex items-center justify-between">
         <div class="logo">
             <a href="index.html" class="logo">
@@ -20,12 +26,13 @@
             </a>
         </div>
         <div class="input">
-            <input class="text-l  w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
+            <input class="text-l w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
                    placeholder="Search a movie or show">
         </div>
+
         <div class="nav-menu ">
             <ul class="flex">
-                <li class="ml-5">
+                <li>
                     <a href="index.html">Movies</a>
                 </li>
                 <li class="ml-5">
@@ -36,11 +43,12 @@
     </div>
 </header>
 
-<div class="container ">
-    <div class="swiper">
-    </div>
-    <div class="popular max-w-[1200px]">
-        <h1 class="text-center uppercase text-2xl font-bold mb-12">Popular Movies</h1>
+<section class="search mt-12 ">
+    <div class="search-result-wrapper">
+        <h2 class="text-center text-3xl mb-12">10 of 100 RESULTS FOR TERMİNATÖR</h2>
+        <div class="container">
+
+
         <div class="cards gap-5">
             <div class="card">
                 <a href="#" class="img">
@@ -99,9 +107,22 @@
                 <p>Release: XX/XX/XXXX</p>
             </div>
         </div>
+            <div class="end-wrapper flex justify-between mt-12 items-center">
+                <div class="buttons gap-5 flex">
+                    <button class="btn prev hover:cursor-not-allowed">Prev</button>
+                    <button class="btn next">Next</button>
+                </div>
+                <div class="page">
+                    <span>Page 1 of 20</span>
+                </div>
+
+            </div>
+
     </div>
-</div>
-<footer class="footer flex justify-between border-t border-gray-500 items-center mt-5">
+    </div>
+</section>
+
+<footer class="footer flex justify-between border-t border-gray-500 items-center mt-12">
     <div class="container flex justify-between mt-5">
         <div class="copyright">© Copyright 2023</div>
         <div class="icons">
@@ -121,6 +142,8 @@
     </div>
 
 </footer>
+
+
 
 </body>
 </html>
