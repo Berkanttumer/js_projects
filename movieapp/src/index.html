@@ -13,19 +13,37 @@
 </head>
 <body class="bg-black text-white font-Poppins">
 <header class="header">
+    <div class="mobile-bar hidden">
+        <a href="#">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+    </div>
     <div class="container flex items-center justify-between">
         <div class="logo">
             <a href="index.html" class="logo">
                 <img class="w-[180px]" src="/src/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
             </a>
         </div>
-        <div class="input">
-            <input class="text-l  w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
-                   placeholder="Search a movie or show">
-        </div>
+        <form action="search.html">
+            <div class="search">
+                <div class="input relative">
+                    <input class="text-l  w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
+                           placeholder="Search a movie or show">
+                    <div class="button">
+                        <button class="search-btn absolute">Search</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+
+
+
         <div class="nav-menu ">
             <ul class="flex">
-                <li class="ml-5">
+                <li >
                     <a href="index.html">Movies</a>
                 </li>
                 <li class="ml-5">
