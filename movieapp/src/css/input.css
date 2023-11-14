@@ -3,38 +3,96 @@
 @tailwind utilities;
 
 
-@media (max-width: 1200px) {
-    .input {
-    display: none;
-    }
+/*Mobile Menu*/
+.nav-btn {
+    font-size: 20px;
 }
 
-@media (max-width: 950px) {
-    .nav-menu {
-        display: none;
-    }
-
-    .mobile-bar {
-        display: flex;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        font-size: 30px;
-        z-index: 1;
-    }
-
-    .container {
-
-        flex-direction: column;
-    }
-
-    .actors {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
 }
 
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
+    z-index: 9999;
+}
+
+.nav.visible {
+    transform: translateX(0);
+}
+
+.nav-black {
+    background-color: black;
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+    transition-delay: 0s;
+}
+
+.nav-red {
+    background-color: #DC1A28;
+    width: 95%;
+    transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+    transition-delay: 0.2s;
+}
+
+.nav-white {
+    background-color: #fff;
+    width: 95%;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+
+.nav-white.visible {
+    transition-delay: 0.4s;
+}
+
+.close-btn {
+    opacity: 0.3;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    margin: 20px 0;
+}
+
+.list li a {
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.list ul {
+    padding-left: 20px;
+}
+
+.list li a:hover {
+    color: #DC1A28;
+}
+
+/*Main*/
 .header {
     margin-top: 20px;
 }
@@ -42,7 +100,6 @@
 .fa-bars {
     font-size: 25px;
 }
-
 
 .btn {
     border: 1px solid darkgray;
@@ -190,6 +247,7 @@ footer .container {
     margin: 20px auto !important;
 }
 
+/*Webkit*/
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -203,6 +261,7 @@ footer .container {
     background: none;
 }
 
+/*Search Btn*/
 .search-btn {
     right: -1px;
     top: 0;
@@ -211,7 +270,6 @@ footer .container {
     height: 48px;
     font-size: 14px;
     padding: 5px 46px;
-
     border-radius: 30px;
 }
 
@@ -219,4 +277,33 @@ footer .container {
     color: #324147;
     font-weight: 700;
 }
+
+/*Responsive*/
+@media (max-width: 1200px) {
+    .nav-menu {
+        display: none;
+    }
+    .input {
+        display: none;
+    }
+    .mobile-bar {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        z-index: 1;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .actors {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
+
 
