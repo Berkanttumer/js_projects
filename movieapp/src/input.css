@@ -193,3 +193,19 @@ footer .container {
 .details-page {
 
 }
+
+/* Özel Kaydırma Çubuğu Tasarımı */
+::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#DBDBDB;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
