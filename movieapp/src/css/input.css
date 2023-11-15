@@ -51,7 +51,7 @@
 }
 
 .nav-white {
-    background-color: #fff;
+    background-color: black;
     width: 95%;
     padding: 40px;
     position: relative;
@@ -78,7 +78,7 @@
 }
 
 .list li a {
-    color: rgb(34, 31, 31);
+    color: #324147;
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
@@ -91,6 +91,21 @@
 .list li a:hover {
     color: #DC1A28;
 }
+
+.fas.fa-times:hover {
+    color: #DC1A28;
+}
+
+.mobile-search {
+    width: 250px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-size: 15px;
+}
+
 
 /*Main*/
 .header {
@@ -283,9 +298,11 @@ footer .container {
     .nav-menu {
         display: none;
     }
+
     .input {
         display: none;
     }
+
     .mobile-bar {
         display: flex;
         position: fixed;
