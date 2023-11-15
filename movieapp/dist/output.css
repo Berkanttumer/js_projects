@@ -604,6 +604,10 @@ video {
   margin-top: 4rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -805,7 +809,7 @@ video {
 }
 
 .nav-white {
-  background-color: #fff;
+  background-color: black;
   width: 95%;
   padding: 40px;
   position: relative;
@@ -832,7 +836,7 @@ video {
 }
 
 .list li a {
-  color: rgb(34, 31, 31);
+  color: #324147;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -844,6 +848,24 @@ video {
 
 .list li a:hover {
   color: #DC1A28;
+}
+
+.fas.fa-times {
+  color: #324147;
+  font-size: 26px;
+}
+
+.fas.fa-times:hover {
+  color: #DC1A28;
+}
+
+.mobile-search {
+  width: 250px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: black;
 }
 
 /*Main*/
