@@ -1,3 +1,4 @@
+// Mobile Menu
 const openBtn = document.querySelector('.open-btn')
 const closeBtn = document.querySelector('.close-btn')
 const nav = document.querySelectorAll('.nav')
@@ -9,4 +10,15 @@ openBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     nav.forEach(navEl => navEl.classList.remove('visible'))
 })
+
+// Page Check
+const global = {
+    currentPage: window.location.pathname
+}
+
+function init() {
+
+}
+
+
 
