@@ -4,25 +4,16 @@
     <meta charset="UTF-8" />
     <title>BerkantFlix</title>
     <link rel="stylesheet" href="/dist/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="lib/swiper.css">
   </head>
   <body class="bg-black text-white font-Poppins">
     <header class="header">
-      <button class="open-btn mobile-bar hidden">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      
 
       <div class="nav-wrapper">
         <div class="nav nav-black">
@@ -55,175 +46,79 @@
       </div>
 
       <div class="container flex items-center justify-between">
+
+        <button class="open-btn mobile-bar hidden">
+          <i class="fa-solid fa-bars"></i>
+      </button>
         <div class="logo">
-          <a href="index.html" class="logo">
-            <img
-              class="w-[180px]"
-              src="img/e9e7a5a5bda4050781491119636d0b0f.png"
-              alt=""
-            />
-          </a>
+            <a href="index.html" class="">
+                <img class="w-[180px]" src="img/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
+            </a>
         </div>
-        <form action="search.html">
-          <div class="search">
+        <form action="search.html" id="search-form" class="search-form">
             <div class="input relative">
-              <input
-                class="text-l w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full"
-                type="text"
-                placeholder="Search a movie or show"
-              />
-              <div class="button">
-                <button class="search-btn absolute">Search</button>
-              </div>
+                <input class="text-l w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
+                   placeholder="Search a movie" id="searchInput" name="search-term" >
+                <div class="button">
+                    <button class="search-btn absolute">Search</button>
+                </div>
             </div>
-          </div>
         </form>
-
-        <div class="nav-menu">
-          <ul class="flex">
-            <li>
-              <a class='nav-link' href="/index.html">Movies</a>
-            </li>
-            <li class="ml-5">
-              <a class='nav-link' href="/tv-shows.html">TV Shows</a>
-            </li>
-          </ul>
+        <div class="nav-menu ">
+            <ul class="flex">
+                <li>
+                    <a class='nav-link' href="/index.html">Movies</a>
+                </li>
+                <li class="ml-5">
+                    <a class='nav-link' href="/tv-shows.html">TV Shows</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </header>
-
-    <div class="container">
-      <div class="swiper"></div>
-      <div class="popular">
-        <h1 class="text-center uppercase text-2xl font-bold mb-12">
-          Popular Movies
-        </h1>
-        <div class="cards gap-5">
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-          <div class="card">
-            <a href="#" class="img">
-              <img src="img/no-image.jpg" alt="" />
-            </a>
-            <h2>Movie Title</h2>
-            <p>Release: XX/XX/XXXX</p>
-          </div>
-        </div>
-      </div>
-      <section class="streaming">
-        <div class="swiper"></div>
-        <div class="container">
-          <h1 class="text-center uppercase text-2xl font-bold mt-12 mb-12">
-            Streaming
-          </h1>
-          <div class="cards gap-5">
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-            <div class="card">
-              <a href="#" class="img">
-                <img src="img/no-image.jpg" alt="" />
-              </a>
-              <h2>Movie Title</h2>
-              <p>Release: XX/XX/XXXX</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
+   
+    </header>
+    <div class="mt-6 text-xl" id="alert"></div>
+<section class="swiper-section mt-16 ml-10 mr-10">
+  
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          
+        </div>
+
+    </div>
+  </section>
+
+<section class="popular-movies">
+      
+      <div class="container">
+         
+        <div class="popular">
+          <h1 class="text-center uppercase text-2xl font-bold mb-12">
+            Popular Movies
+          </h1>
+          <div class="movie-cards cards gap-5">
+         
+          
+          </div>
+        <d/iv>
+      </div>
+</section>
+
+    <section class="popular-tv">
+      <div class="swiper"></div>
+      <div class="container">
+        <div class="popular">
+          <h1 class="text-center uppercase text-2xl font-bold mb-12">
+            Popular TV
+          </h1>
+          <div class="popular-tv-cards cards gap-5">
+         
+          
+          </div>
+        <d/iv>
+      </div>
+    </section>
+
     <footer
       class="footer flex justify-between border-t border-gray-500 items-center mt-5"
     >
@@ -245,5 +140,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="lib/swiper.js"></script>
   </body>
 </html>

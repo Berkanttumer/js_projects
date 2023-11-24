@@ -12,146 +12,131 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-Poppins">
-<header class="header">
-    <div class="mobile-bar hidden">
-        <a href="#">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-    </div>
-    <div class="container flex items-center justify-between">
-        <div class="logo">
-            <a href="index.html" class="logo">
-                <img class="w-[180px]" src="img/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
-            </a>
-        </div>
-        <div class="input relative">
-            <input class="text-l w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
-                   placeholder="Search a movie or show">
-            <div class="button">
-                <button class="search-btn absolute">Search</button>
-            </div>
-        </div>
-        <div class="nav-menu ">
-            <ul class="flex">
-                <li>
-                    <a href="index.html">Movies</a>
-                </li>
-                <li class="ml-5">
-                    <a href="tv-shows.html">TV Shows</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
+    <header class="header">
+      
 
-<section class="details-page mt-[50px]">
-    <div class="container flex flex-row gap-14">
-        <div class="left-col flex flex-col ">
+        <div class="nav-wrapper">
+          <div class="nav nav-black">
+            <div class="nav nav-red">
+              <div class="nav nav-white">
+                <button class="nav-btn close-btn">
+                  <i class="fas fa-times text-blue-900"></i>
+                </button>
+                <a href="index.html" class="w-[180px] block">
+                  <img
+                    class="w-[180px]"
+                    src="img/e9e7a5a5bda4050781491119636d0b0f.png"
+                    alt=""
+                  />
+                </a>
+                <form class="mt-2" action="search.html">
+                  <input
+                    class="mobile-search"
+                    type="text"
+                    placeholder="Search..."
+                  />
+                </form>
+                <ul class="list">
+                  <li><a href="index.html">Movies</a></li>
+                  <li><a href="tv-shows.html">TV Shows</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="container flex items-center justify-between">
+  
+          <button class="open-btn mobile-bar hidden">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+          <div class="logo">
+              <a href="index.html" class="">
+                  <img class="w-[180px]" src="img/e9e7a5a5bda4050781491119636d0b0f.png" alt="">
+              </a>
+          </div>
+          <form action="search.html">
+              <div class="input relative">
+                  <input class="text-l w-[780px] outline-none border-none text-black p-3 pl-6 rounded-full" type="text"
+                     placeholder="Search a movie or show" id="searchInput" name="search-term">
+                  <div class="button">
+                      <button class="search-btn absolute">Search</button>
+                  </div>
+              </div>
+          </form>
+          <div class="nav-menu ">
+              <ul class="flex">
+                  <li>
+                      <a class='nav-link' href="/index.html">Movies</a>
+                  </li>
+                  <li class="ml-5">
+                      <a class='nav-link' href="/tv-shows.html">TV Shows</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      </header>
+
+<section class="details-page mt-[50px] mb-[200px] max-h-[700px] ">
+    <div class="movie-bg">
+                
+    </div>
+    <div class="movie-background container gap-14 relative flex flex-row">
+        
+        <div class="movie-title left-col ">
             <div class="top-title">
-                <h1 class="mb-5">Hacksaw Ridge</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus accusantium corporis cupiditate delectus deserunt dolores ducimus expedita fugit id inventore maiores nemo odio optio praesentium quia quis quo recusandae sapiente sequi sunt, velit vitae voluptates. Alias aliquam architecto asperiores cupiditate distinctio dolorum eius libero molestiae, mollitia nesciunt officiis rem repellendus rerum sapiente sed veritatis, voluptates. Cupiditate omnis sunt suscipit!</p>
+                
             </div>
             <div class="top-rank items-center flex mt-5 ">
-                <div class="total-points">
-                    <h4 class="points-title">9.8</h4>
-                </div>
-                <div class="other-points flex gap-20 m-10">
-                    <div class="vote-points">
-                        <h4>8.2</h4>
-                        <p>lorem</p>
-                    </div>
-                    <div class="like-points">
-                        <h4>87%</h4>
-                        <p>lorem</p>
-                    </div>
-                    <div class="rated-average">
-                        <h4>71%</h4>
-                        <p>lorem</p>
-                    </div>
-                </div>
-
+               
             </div>
             <div class="casts mt-8">
                 <div class="cast-title">
-                    <h2>The cast</h2>
+                    <h2 class="text-2xl">The cast</h2>
                 </div>
                 <div class="cast-row mt-5">
-                    <div class="actors flex flex-row gap-5">
-                        <div class="actor">
-                            <a href="#">
-                                <img class="w-[150px]" src="img/no-image.jpg" alt="">
-                                <p>Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="actor">
-                            <a href="#">
-                                <img class="w-[150px]" src="img/no-image.jpg" alt="">
-                                <p>Lorem ipsum</p>
-                            </a>
-
-                        </div>
-                        <div class="actor">
-                            <a href="#">
-                                <img class="w-[150px]" src="img/no-image.jpg" alt="">
-                                <p>Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="actor">
-                            <a href="#">
-                                <img class="w-[150px]" src="img/no-image.jpg" alt="">
-                                <p>Lorem ipsum</p>
-                            </a>
-                        </div>
-                        <div class="actor">
-                            <a href="#">
-                                <img class="w-[150px]" src="img/no-image.jpg" alt="">
-                                <p>Lorem ipsum</p>
-                            </a>
-                        </div>
+                    <div class="actors flex flex-row gap-5 flex-wrap">
+                      
                     </div>
                 </div>
-
-
             </div>
         </div>
         <div class="right-col w-[1300px]  ">
             <div class="infos">
-                <div class="trailer relative">
-                    <a href="#">
-                        <img class="w-[300px]" src="img/no-image.jpg" alt="">
-                    </a>
+                <div class="trailer relative w-[270px]">
+                 
                     <div class="play-button mb-5">
                         <a href="#">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </div>
                 </div>
-                </div>
-                <div class="about mt-16">
-                    <ul class=" flex flex-col">
-                        <li>
-                            <span>Date Release</span>
-                            <a href="#"><span>16 October 2016</span> </a>
-                        </li>
-                        <li>
-                           <span>Length</span>
-                            <a href="#"><span>2 h 19 min</span> </a>
-                        </li>
-                        <li>
-                            <span>Director</span>
-                            <a href="#"><span>Christopher Nolan</span> </a>
-                        </li>
-                        <li>
-                            <span>Movie Cost</span>
-                            <span>$175.3M</span>
-                        </li>
+            </div>
+            <div class="about mt-8">
+                <ul class="about-ul flex flex-col mt-12">
+                   
+                    
 
-                    </ul>
-                </div>
+                </ul>
             </div>
         </div>
+    </div>
 
     </div>
+</section>
+
+
+<section class="rec">
+   
+
+    <div class="rec-container container">
+        <div class="title text-2xl mb-8"><h2>You may also like</h2></div>
+        <div class="rec-wrap">
+
+        </div>
+</div>
+
+
 </section>
 <footer class="footer flex justify-between border-t border-gray-500 items-center">
     <div class="container flex justify-between mt-5">
@@ -174,6 +159,6 @@
 
 </footer>
 
-
+<script src="script.js"></script>
 </body>
 </html>
