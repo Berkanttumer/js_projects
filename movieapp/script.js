@@ -1,3 +1,5 @@
+
+
 // Mobile Menu
 const openBtn = document.querySelector('.open-btn');
 const closeBtn = document.querySelector('.close-btn');
@@ -38,39 +40,42 @@ function highlightActiveLink() {
 // Page Check
 function init() {
   switch (global.currentPage) {
-    case '/':
+  
+
     case '/index.html':
       displayPopularMovies();
       displayPopularTV();
       displaySlider();
-      handleSearchFormSubmit()
-     
+      handleSearchFormSubmit();
       break;
+
     case '/tv-shows.html':
       displayPopularTVPage();
-      displayTVDetails();
-      getTVDetailsCast();
-      getTVRec();
       displayTopRatedTV();
       displayTrendingOnTV();
-      handleSearchFormSubmitTV()
-      
-
+      handleSearchFormSubmitTV();
       break;
+
     case '/search.html':
       console.log('SEARCH SAYFASI');
       searchMovie();
-      searchTV()
       break;
+
     case '/movie-details.html':
       displayMovieDetails();
       getMovieDetailsCast();
       getMovieRec();
       break;
+
     case '/tv-show-details.html':
       displayTVDetails();
       getTVDetailsCast();
       getTVRec();
+      break;
+
+    case '/searchTV.html':
+      console.log('SEARCH SAYFASI 2');
+      searchTV();
       break;
   }
   highlightActiveLink();
@@ -382,7 +387,7 @@ async function displayTVDetails() {
   point.innerHTML = `
     <div class="flex gap-5 items-center justify-center">
                     <i class="fas fa-star text-primary text-[#dc1a28]"></i>
-                    <p>${tv.vote_average.toFixed(1)} / 10</p>
+                   
                 </div>
      
     `;
@@ -547,7 +552,7 @@ async function searchAPIData() {
   const API_URL = global.API_URL;
 
   const res = await fetch(
-    `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${global.search.term}`
+    `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${global.search.term}&page=${global.search.page}`
   );
   const data = await res.json();
 
@@ -585,7 +590,6 @@ function showAlert(message) {
 }
 
 async function searchTV() {
-
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
@@ -593,26 +597,25 @@ async function searchTV() {
   global.search.term = urlParams.get('search-term');
 
   if (global.search.term !== '' && global.search.term !== null) {
-    const { results, total_pages, page, total_results } = await searchAPIDataTV();
+    const { results, total_pages, page, total_results } =
+      await searchAPIDataTV();
 
-    global.search.page = page
-    global.search.totalPages = total_pages
-    global.search.totalResults = total_results
+    global.search.page = page;
+    global.search.totalPages = total_pages;
+    global.search.totalResults = total_results;
 
-    if (results.length === 0){
-      showAlert('No results')
-      return
+    if (results.length === 0) {
+      showAlert('No results');
+      return;
     }
 
     displaySearchResultsTV(results);
 
-    document.querySelector('#search-input').value = ''
-    
+    document.querySelector('#search-input2').value = '';
   }
 }
 
-function displaySearchResultsTV(results){
-  
+function displaySearchResultsTV(results) {
   results.forEach((tv) => {
     const div = document.createElement('div');
     div.classList.add('card');
@@ -638,22 +641,18 @@ function displaySearchResultsTV(results){
   </div>
   </div>
 `;
+    console.log(results)
+    const title = document.querySelector('.search-title2');
+    title.innerHTML = `${results.length} of ${
+      global.search.totalResults
+    } Results for <span class="text-[#dc1a28] font-bold">${global.search.term.toUpperCase()}</span>`;
+    document.querySelector('.page-title2').appendChild(title);
 
-    const title = document.querySelector('.search-deneme')
-    title.innerHTML =`${results.length} of ${global.search.totalResults} Results for <span class="text-[#dc1a28] font-bold">${global.search.term.toUpperCase()}</span>`
-    document.querySelector('.page-title').appendChild(title)
-
-
-    document.querySelector('.search-cards').appendChild(div);
+    document.querySelector('.search-cards2').appendChild(div);
   });
-
-
 }
 
-
-
 async function searchMovie() {
-
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
@@ -663,24 +662,27 @@ async function searchMovie() {
   if (global.search.term !== '' && global.search.term !== null) {
     const { results, total_pages, page, total_results } = await searchAPIData();
 
-    global.search.page = page
-    global.search.totalPages = total_pages
-    global.search.totalResults = total_results
+    global.search.page = page;
+    global.search.totalPages = total_pages;
+    global.search.totalResults = total_results;
 
-    if (results.length === 0){
-      showAlert('No results')
-      return
+    if (results.length === 0) {
+      showAlert('No results');
+      return;
     }
 
     displaySearchResults(results);
 
-    document.querySelector('#search-input').value = ''
-    
+    document.querySelector('#searchInput').value = '';
   }
 }
 
-function displaySearchResults(results){
-  
+function displaySearchResults(results) {
+
+  document.querySelector('.search-cards').innerHTML = ''
+  document.querySelector('.end-wrapper').innerHTML = ''
+
+
   results.forEach((movie) => {
     const div = document.createElement('div');
     div.classList.add('card');
@@ -707,53 +709,77 @@ function displaySearchResults(results){
   </div>
 `;
 
-    const title = document.querySelector('.search-deneme')
-    title.innerHTML =`${results.length} of ${global.search.totalResults} Results for <span class="text-[#dc1a28] font-bold">${global.search.term.toUpperCase()}</span>`
-    document.querySelector('.page-title').appendChild(title)
-
+    const title = document.querySelector('.search-deneme');
+    title.innerHTML = `${results.length} of ${
+      global.search.totalResults
+    } Results for <span class="text-[#dc1a28] font-bold">${global.search.term.toUpperCase()}</span>`;
+    document.querySelector('.page-title').appendChild(title);
 
     document.querySelector('.search-cards').appendChild(div);
   });
 
-
+  displayPagination();
 }
+
+// Pagination for search
+function displayPagination() {
+  const div = document.createElement('div');
+  div.innerHTML = `<div class="buttons gap-5 flex">
+  <button class="btn prev">Prev</button>
+  <button class="btn next">Next</button>
+</div>
+<div class="page mt-4">
+  <span>Page ${global.search.page} of ${global.search.totalPages}</span>
+</div>`;
+
+  document.querySelector('.end-wrapper').appendChild(div);
+
+  if (global.search.page === 1){
+    document.querySelector('.prev').disabled = true
+  
+  }
+
+  if (global.search.page === global.search.totalPages){
+    document.querySelector('.next').disabled = true
+  }
+
+  document.querySelector('.next').addEventListener('click', async()=>{
+    global.search.page++
+    const {results , total_Pages} = await searchAPIData()
+    displaySearchResults(results)
+  })
+
+  document.querySelector('.prev').addEventListener('click', async()=>{
+    global.search.page--
+    const {results , total_Pages} = await searchAPIData()
+    displaySearchResults(results)
+  })
+}
+
+
+
 
 // Search form submission handler
 function handleSearchFormSubmit() {
- 
-
-  document.querySelector('.search-form').addEventListener('submit', (event)=>{
-    
+  document.querySelector('.search-form').addEventListener('submit', (event) => {
     const input = document.getElementById('searchInput');
     if (input.value === '') {
-      event.preventDefault()
-    
-      
+      event.preventDefault();
     } else {
       searchMovie();
     }
-   
   });
- 
 }
 
 function handleSearchFormSubmitTV() {
- 
-
-  document.querySelector('.search-form2').addEventListener('submit', (event)=>{
-    
-    const input = document.getElementById('searchTV');
-    if (input.value === '') {
-      event.preventDefault()
-    
-      
-    } else {
-      searchMovie();
-    }
-   
-  });
- 
+  document
+    .querySelector('.search-form2')
+    .addEventListener('submit', (event) => {
+      const input = document.getElementById('searchInput2');
+      if (input.value === '') {
+        event.preventDefault();
+      } else {
+        searchTV()
+      }
+    });
 }
-
-
-

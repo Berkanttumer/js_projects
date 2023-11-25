@@ -683,6 +683,10 @@ video {
   margin: 0.25rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -735,6 +739,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -743,8 +751,8 @@ video {
   margin-top: 50px;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .box-border {
@@ -870,12 +878,20 @@ video {
   width: 1300px;
 }
 
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[180px\] {
   width: 180px;
 }
 
 .w-\[270px\] {
   width: 270px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[780px\] {
@@ -940,6 +956,10 @@ video {
 
 .transform-none {
   transform: none;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
 }
 
 .touch-auto {
@@ -1400,6 +1420,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-3 {
