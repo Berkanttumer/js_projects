@@ -64,7 +64,6 @@ function init() {
       break;
 
     case '/search.html':
-      console.log('SEARCH SAYFASI');
       searchMovie();
       break;
 
@@ -81,7 +80,6 @@ function init() {
       break;
 
     case '/searchTV.html':
-      console.log('SEARCH SAYFASI 2');
       searchTV();
       break;
   }
@@ -208,7 +206,7 @@ async function displayPopularTV() {
 </div>
 </div>
 `;
-    document.querySelector('.popular-tv-cards').appendChild(div);
+    document.querySelector('.popular-tv-page').appendChild(div);
   });
 }
 
@@ -394,7 +392,7 @@ async function displayTVDetails() {
   point.innerHTML = `
     <div class="flex gap-5 items-center justify-center">
                     <i class="fas fa-star text-primary text-[#dc1a28]"></i>
-                   
+                    <p>${tv.vote_average.toFixed(1)} / 10</p>
                 </div>
      
     `;
@@ -627,15 +625,15 @@ function displaySearchResultsTV(results) {
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML = `
-    <a href="movie-details.html?id=${tv.id}">
+    <a href="tv-show-details.html?id=${tv.id}">
     ${
       tv.poster_path
         ? `<img
-      src="https://image.tmdb.org/t/p/w500${tv.poster_path}" class="img alt="${tv.title}" />`
-        : `<img src="img/no-image.jpg" alt="${tv.title}" />`
+      src="https://image.tmdb.org/t/p/w500${tv.poster_path}" class="img alt="${tv.name}" />`
+        : `<img src="img/no-image.jpg" alt="${tv.name}" />`
     }
     </a>
-    <h2 class="font-bold">${tv.title}</h2>
+    <h2 class="font-bold">${tv.name}</h2>
     <div class="flex justify-between items-center">
       <div class="flex gap-2">
         <p><i class="fas fa-star text-[#dc1a28]"></i></p>
@@ -779,26 +777,14 @@ function handleSearchFormSubmit() {
 }
 
 function handleSearchFormSubmitTV() {
-  document
-    .querySelector('.search-form2')
-    .addEventListener('submit', (event) => {
-      const input = document.getElementById('searchInput2');
-      if (input.value === '') {
-        event.preventDefault();
-      } else {
-        searchTV()
-      }
-    });
-}
-
-function handleSearchFormSubmitMobile() {
-  document.querySelector('.search-form-mobile').addEventListener('submit', (event) => {
-   
-    const input = document.getElementById('searchInputMobile');
+  document.querySelector('.search-form2').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const input = document.getElementById('searchTV');
     if (input.value === '') {
-      event.preventDefault();
+      showAlert('Please enter a search term.');
     } else {
-      searchMovie();
+      const searchURL = `searchTV.html?type=tv&search-term=${input.value}`;
+      window.location.href = searchURL;
     }
   });
 }
