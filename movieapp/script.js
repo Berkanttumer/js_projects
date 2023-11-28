@@ -47,6 +47,7 @@ function init() {
       displayPopularTV();
       displaySlider();
       handleSearchFormSubmit();
+      handleSearchFormSubmitMobile()
       break;
 
     case '/tv-shows.html':
@@ -782,4 +783,29 @@ function handleSearchFormSubmitTV() {
         searchTV()
       }
     });
+}
+
+function handleSearchFormSubmitMobile() {
+  document.querySelector('.search-form-mobile').addEventListener('submit', (event) => {
+   
+    const input = document.getElementById('searchInputMobile');
+    if (input.value === '') {
+      event.preventDefault();
+    } else {
+      searchMovie();
+    }
+  });
+}
+
+function handleSearchFormSubmitMobile() {
+  document.querySelector('.search-form-mobile').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const input = document.getElementById('searchInputMobile');
+    if (input.value === '') {
+      showAlert('Please enter a search term.');
+    } else {
+      const searchURL = `search.html?type=movie&search-term=${input.value}`;
+      window.location.href = searchURL;
+    }
+  });
 }

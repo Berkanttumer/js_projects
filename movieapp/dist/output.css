@@ -735,6 +735,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -749,10 +753,6 @@ video {
 
 .mt-\[50px\] {
   margin-top: 50px;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .box-border {
@@ -956,10 +956,6 @@ video {
 
 .transform-none {
   transform: none;
-}
-
-.cursor-not-allowed {
-  cursor: not-allowed;
 }
 
 .touch-auto {
