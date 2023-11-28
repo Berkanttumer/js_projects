@@ -61,6 +61,7 @@ function init() {
       displayTopRatedTV();
       displayTrendingOnTV();
       handleSearchFormSubmitTV();
+      handleSearchFormSubmitMobileTV()
       break;
 
     case '/search.html':
@@ -80,7 +81,8 @@ function init() {
       break;
 
     case '/searchTV.html':
-      searchTV();
+      
+      handleSearchFormSubmitMobileTV()
       break;
   }
   highlightActiveLink();
@@ -798,6 +800,19 @@ function handleSearchFormSubmitMobile() {
     } else {
       const searchURL = `search.html?type=movie&search-term=${input.value}`;
       window.location.href = searchURL;
+    }
+  });
+}
+
+function handleSearchFormSubmitMobileTV() {
+  document.querySelector('.searchFormMobileTV').addEventListener('submit', (event) => {
+    const input = document.getElementById('searchInputMobileTV');
+    if (input.value === '') {
+      event.preventDefault();
+    } else {
+      const searchURL = `searchTV.html?type=tv&search-term=${input.value}`;
+      window.location.href = searchURL;
+      searchTV();
     }
   });
 }
