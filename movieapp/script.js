@@ -1,4 +1,10 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+  displayPopularMovies();
+  displayPopularTV();
+  displaySlider();
+  handleSearchFormSubmit();
+  handleSearchFormSubmitMobile()
+});
 
 // Mobile Menu
 const openBtn = document.querySelector('.open-btn');
