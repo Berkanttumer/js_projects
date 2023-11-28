@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+
+document.addEventListener('DOMContentLoaded',()=>{
   displayPopularMovies();
   displayPopularTV();
   displaySlider();
   handleSearchFormSubmit();
   handleSearchFormSubmitMobile()
-});
+})
 
 // Mobile Menu
 const openBtn = document.querySelector('.open-btn');
@@ -62,6 +64,7 @@ function init() {
       displayTrendingOnTV();
       handleSearchFormSubmitTV();
       handleSearchFormSubmitMobileTV()
+      
       break;
 
     case '/search.html':
@@ -82,7 +85,7 @@ function init() {
 
     case '/searchTV.html':
       searchTV()
-      handleSearchFormSubmitMobileTV()
+    
       break;
   }
   highlightActiveLink();
@@ -783,7 +786,7 @@ function handleSearchFormSubmitTV() {
     event.preventDefault();
     const input = document.getElementById('searchTV');
     if (input.value === '') {
-      showAlert('Please enter a search term.');
+      event.preventDefault
     } else {
       const searchURL = `searchTV.html?type=tv&search-term=${input.value}`;
       window.location.href = searchURL;
@@ -796,7 +799,7 @@ function handleSearchFormSubmitMobile() {
     event.preventDefault();
     const input = document.getElementById('searchInputMobile');
     if (input.value === '') {
-      showAlert('Please enter a search term.');
+     event.preventDefault
     } else {
       const searchURL = `search.html?type=movie&search-term=${input.value}`;
       window.location.href = searchURL;
@@ -805,14 +808,13 @@ function handleSearchFormSubmitMobile() {
 }
 
 function handleSearchFormSubmitMobileTV() {
-  document.querySelector('.searchFormMobileTV').addEventListener('submit', (event) => {
-    const input = document.getElementById('searchInputMobileTV');
+  document.querySelector('.searchFormMobileForTV').addEventListener('submit', (event) => {
+    const input = document.getElementById('searchInputForTV');
     if (input.value === '') {
       event.preventDefault();
     } else {
       const searchURL = `searchTV.html?type=tv&search-term=${input.value}`;
       window.location.href = searchURL;
-      searchTV();
     }
   });
 }
