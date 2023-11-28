@@ -81,7 +81,7 @@ function init() {
       break;
 
     case '/searchTV.html':
-      
+      searchTV()
       handleSearchFormSubmitMobileTV()
       break;
   }
